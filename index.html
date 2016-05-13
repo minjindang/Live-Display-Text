@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width">
+	  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	  <link rel="stylesheet" type="text/css" href="css/style.css" >
+	  <script> 
+		$(document).ready(function(){
+		    //Live display text to page
+		    $("#now").bind("keypress",function(){
+		        var text = $('input').val();
+		        $("div").html(text);
+		    });
+
+	    	});
+		$(document).keydown(function(e){
+		    //The text be display of left to right when user input text or number		
+		    if(e.keyCode!=8){
+			if(!e) var e = window.event;
+		        $("div").html(e);
+                        $("div").animate({marginLeft:'45%'},"8500");
+                        $("div").show("slow");		
+		    }
+		    //The text be hide of right to left wher user click "DELETE" on keyborad.
+		    if(e.keyCode==8){
+		    	var text = $('input').val();
+			$("div").html(text);
+			$("div").animate({marginLeft:'0%'},"80000");
+			$("div").hide("fast");
+		    }
+		});
+	   </script>
+	</head>
+	<body>
+		<input type="text" id="now" class="textbox"/>
+		<div class="move"></div>
+	</body>
+</html>
+

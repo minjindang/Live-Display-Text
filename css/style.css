@@ -1,0 +1,10 @@
+
+.textbox {
+	position:relative;
+	margin-left:45%;
+}
+
+.move {
+        margin-top:10px;
+	position:absolute;
+}
