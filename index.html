@@ -15,21 +15,20 @@
 
 	    	});
 		$(document).keydown(function(e){
-		    //The text be display of left to right when user input text or number		
+  		    //The text be display of left to right when user input text or number
 		    if(e.keyCode!=8){
 			if(!e) var e = window.event;
 		        $("div").html(e);
                         $("div").animate({marginLeft:'45%'},"8500");
                         $("div").show("slow");		
 		    }
-		    //The text be hide of right to left wher user click "DELETE" on keyborad.
+		    //The text be hide of right to left when user click "DELETE" on keyborad.
 		    if(e.keyCode==8){
 		    	var text = $('input').val();
 			$("div").html(text);
 			$("div").animate({marginLeft:'0%'},"80000");
 			$("div").hide("fast");
 		    }
-		});
 	   </script>
 	</head>
 	<body>
