@@ -1,4 +1,4 @@
-# Live-Display-Text
+# Live-Display-Text 1.2
 jQuery&amp;Javascript
 
 
